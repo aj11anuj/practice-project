@@ -42,7 +42,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
       - name: Build and push Docker images
-        uses: excellent/docker-build-push@v4
+        uses: mr-smithers-excellent/docker-build-push@v4
         with:
          image: aj11anuj/practice-project
          registry: docker.io
