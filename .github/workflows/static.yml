@@ -41,3 +41,11 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Build and push Docker images
+        uses: excellent/docker-build-push@v4
+        with:
+         image: aj11anuj/practice-project
+         registry: docker.io
+         username: ${{ secrets.DOCKER_USERNAME }}
+         password: ${{ secrets.DOCKER_PASSWORD }}
+            
